@@ -1,0 +1,5 @@
+services:
+  vulnerable-app:
+    build: ./vulnerable-app
+    ports:
+      - "5000:5000"
