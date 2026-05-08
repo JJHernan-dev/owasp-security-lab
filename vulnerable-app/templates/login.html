@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>OWASP Security Lab</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #111827;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-box {
+            background-color: #1f2937;
+            padding: 30px;
+            border-radius: 10px;
+            width: 300px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 20px;
+            padding: 10px;
+            border: none;
+            background-color: #2563eb;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .mode {
+            text-align: center;
+            margin-bottom: 15px;
+            color: #9ca3af;
+        }
+
+        .success {
+    background-color: #166534;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.error {
+    background-color: #991b1b;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+    </style>
+</head>
+
+<body>
+
+<div class="login-box">
+    <h1>OWASP Lab</h1>
+
+    <div class="mode">
+        Modo: {{ mode }}
+    </div>
+
+{% if message %}
+    <div class="{% if success %}success{% else %}error{% endif %}">
+        {{ message }}
+    </div>
+{% endif %}
+
+    <form method="POST" action="/login">
+        <input type="text" name="username" placeholder="Usuario" required>
+
+        <input type="password" name="password" placeholder="Contraseña" required>
+
+        <button type="submit">Iniciar sesión</button>
+    </form>
+</div>
+
+</body>
+</html>
