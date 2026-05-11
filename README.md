@@ -52,7 +52,7 @@ Demostración de ejecución de JavaScript mediante renderizado inseguro de comen
 
 ### Resultado vulnerable
 
-<img width="700" src="screenshots/sql-injection2.PNG"/>
+<img width="700" src="screenshots/sql-injection3.PNG"/>
 
 ### ✔ Mitigación aplicada
 
