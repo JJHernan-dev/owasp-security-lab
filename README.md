@@ -29,7 +29,7 @@ password: x
 ```
 
 ### Resultado vulnerable
-<img width="700" src="screenshots/login-page3.PNG"/>
+<img width="700" src="screenshots/login-page2.PNG"/>
 
 ### ✔ Mitigación aplicada
 
